@@ -64,6 +64,8 @@ try {
 
   removeSync(dstDir);
 
+  let selectedFilesExists = false;
+
   /**
    * Copy selected note
    */
@@ -93,6 +95,7 @@ try {
       && noteFilteredMap[normalizePath(srcArray[0] + '/' + srcArray[1] + '/' + srcArray[2])]) return true;
   };
   for (let i = 0; i < notePropsFiltered.length; i++) {
+    selectedFilesExists = true;
     copySync(`./${srcDir}/note`, `./${dstDir}/note/`, { filter: noteFilterFunc });
   }
 
@@ -130,6 +133,7 @@ try {
       const snapshotPropertyYFMMD = readFileSync(`./${srcDir}/snapshot/${snapshotFile}`, 'utf8');
       const snapshotProperty = parseFrontMatter(snapshotPropertyYFMMD);
       if (snapshotProperty !== undefined && snapshotProperty.name.startsWith(filterStr)) {
+        selectedFilesExists = true;
         snapshotFilteredMap[normalizePath(`${srcDir}/${snapshotProperty._id}.md`)] = true;
       }
     }
@@ -146,6 +150,10 @@ try {
       && snapshotFilteredMap[normalizePath(srcArray[0] + '/' + srcArray[1] + '/' + srcArray[2])]) return true;
   };
   copySync(`./${srcDir}/snapshot`, `./${dstDir}/snapshot/`, { filter: snapshotFilterFunc });
+
+  if (!selectedFilesExists) {
+    writeFileSync(`${dstDir}/README.md`, 'No files copied.');
+  }
 
 } catch (error) {
   core.setFailed(error.message);
