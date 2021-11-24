@@ -1,7 +1,7 @@
 {
-  "name": "tree-stickies-copy-selected-note",
+  "name": "tree-stickies-copy-selected-note-action",
   "version": "1.0",
-  "description": "Generate indexes of your TreeStickies repository",
+  "description": "This action copies your notes and snapshots whose names start with a specified filter-string to your another repository.",
   "engines": {
     "node": ">=12.0.0"
   },

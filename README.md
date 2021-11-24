@@ -1,18 +1,20 @@
-This action copies your TreeStickies notes and snapshots whose names start with a specified filter-string to your another repository. 
+# tree-stickies-copy-selected-note-action
+
+This GitHub action copies your TreeStickies notes and snapshots whose names start with a specified filter-string to your another repository. 
 
 This will help you to copy some of the data in your private repository to your private repository.
 
 ## Inputs
 
-## `source-dir`
+### `source-dir`
 
 Source working directory name on the runner. Default is 'private'.
 
-## `destination-dir`
+### `destination-dir`
 
 Destination working directory name on the runner. Default is 'public'.
 
-## `filter-string`
+### `filter-string`
 
 Data with names starting with this string will be copied. Default is 'public/'.
 
