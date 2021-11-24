@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const { readdirSync, readFileSync, copySync, copy, remove, removeSync } = require('fs-extra');
+const { readdirSync, readFileSync, copySync, copy, removeSync, writeFileSync } = require('fs-extra');
 const yaml = require('js-yaml');
 
 /**
