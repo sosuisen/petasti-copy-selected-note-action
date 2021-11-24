@@ -1,5 +1,6 @@
 name: 'TreeStickies Copy Selected Notes and Snapshots to Another Repository Action'
 description: 'This action copies your notes and snapshots whose names start with a specified filter-string to your another repository.'
+inputs:
   source-dir:
     description: 'Source working directory name on the runner'
     default: 'private'
