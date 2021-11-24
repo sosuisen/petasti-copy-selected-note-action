@@ -1,0 +1,14 @@
+name: 'TreeStickies Copy Selected Notes and Snapshots to Another Repository Action'
+description: 'This action copies your notes and snapshots whose names start with a specified filter-string to your another repository.'
+  source-dir:
+    description: 'Source working directory name on the runner'
+    default: 'private'
+  destination-dir:
+    description: 'Destination working directory name on the runner'
+    default: 'public'
+  filter-string:
+    description: 'Data with names starting with this string will be copied.'
+    default: 'public'
+runs:
+  using: 'node12'
+  main: 'index.js'
