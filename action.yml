@@ -9,7 +9,7 @@ inputs:
     default: 'public'
   filter-string:
     description: 'Data with names starting with this string will be copied.'
-    default: 'public'
+    default: 'public/'
 runs:
   using: 'node12'
   main: 'index.js'
