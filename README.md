@@ -21,7 +21,7 @@ Data with names starting with this string will be copied. Default is 'public/'.
 ## Usage
 
 ```
-uses: actions/tree-stickies-copy-selected-note@v1.0
+uses: sosuisen/tree-stickies-copy-selected-note@v1.0
 ```
 
 Use this action in your TreeStickies data repository.
