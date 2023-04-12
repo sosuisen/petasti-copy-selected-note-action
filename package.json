@@ -1,5 +1,5 @@
 {
-  "name": "tree-stickies-copy-selected-note-action",
+  "name": "petasti-copy-selected-note-action",
   "version": "1.0",
   "description": "This action copies your notes and snapshots whose names start with a specified filter-string to your another repository.",
   "engines": {
